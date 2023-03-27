@@ -1,12 +1,13 @@
 {
-  "name": "confucius-quotes-web-app",
+  "name": "my-app",
   "version": "1.0.0",
-  "description": "A Node.js web app that displays Confucius quotes from an Azure SQL database",
+  "description": "A simple app that displays Confucius quotes",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "mssql": "^7.2.1"
   }
 }
