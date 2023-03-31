@@ -2,15 +2,16 @@ const sql = require('mssql');
 
 // Configure the database connection
 const config = {
-    user: 'your_database_user',
-    password: 'your_database_password',
-    server: 'your_database_server',
-    database: 'your_database_name',
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    server: process.env.DB_SERVER,
+    database: process.env.DB_NAME,
     options: {
         encrypt: true,
         enableArithAbort: true
     }
 };
+
 
 // Connect to the database
 const poolPromise = new sql.ConnectionPool(config)
