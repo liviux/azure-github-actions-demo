@@ -1,7 +1,7 @@
 {
-  "name": "my-app",
+  "name": "confucius-quotes-backend",
   "version": "1.0.0",
-  "description": "A simple app that displays Confucius quotes",
+  "description": "A simple backend for the Confucius Quotes project",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
