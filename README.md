@@ -15,7 +15,7 @@ Only for GPT4, I added a system prompt before everything: - available (here)[htt
 >- Then output the code in a single code block.
 >Wait for my instructions.
 
-I tried to implement GPT4 instructions here, and when stuck, used some tips from other answers too.
+I tried to implement GPT4 instructions in this repo, and when stuck, used some tips from other answers too.
 
 Now the steps and every answer:  
 
