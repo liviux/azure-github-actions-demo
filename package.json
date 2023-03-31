@@ -1,12 +1,27 @@
 {
-  "name": "confucius-quotes-backend",
+  "name": "confucius-quotes",
   "version": "1.0.0",
-  "description": "A simple backend for the Confucius Quotes project",
+  "description": "A simple Node.js web app that displays Confucius quotes from an Azure SQL Database.",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liviux/azure-github-actions-demo"
+  },
+  "keywords": [
+    "confucius",
+    "quotes",
+    "azure",
+    "sql",
+    "database"
+  ],
+  "author": "Liviu",
+  "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mssql": "^7.2.1"
   }
