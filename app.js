@@ -1,23 +1,16 @@
-// Import required modules
-const express = require('express');
-const { getRandomQuote } = require('./databaseConnection');
+document.addEventListener('DOMContentLoaded', () => {
+    const quoteDisplay = document.getElementById('quote');
+    const getQuoteButton = document.getElementById('get-quote');
 
-// Initialize the Express app
-const app = express();
-const PORT = process.env.PORT || 3000;
+    getQuoteButton.addEventListener('click', async () => {
+        try {
+            const response = await fetch('/api/random-quote');
+            const data = await response.json();
 
-// Define the API endpoint to get a random quote
-app.get('/api/quote', async (req, res) => {
-    try {
-        const quote = await getRandomQuote();
-        res.json({ quote });
-    } catch (error) {
-        console.error('Error fetching quote:', error);
-        res.status(500).json({ error: 'Error fetching quote' });
-    }
-});
-
-// Start the server
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+            quoteDisplay.innerText = data.quote;
+        } catch (error) {
+            console.error('Error fetching quote:', error);
+            quoteDisplay.innerText = 'Error fetching quote. Please try again later.';
+        }
+    });
 });
