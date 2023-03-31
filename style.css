@@ -1,59 +1,54 @@
-/* Reset browser styles */
+/* Reset margin and padding */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Set the background and text colors */
+/* Set the font family for the entire page */
 body {
-    background-color: #f8f1e4;
-    color: #4a3b2e;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f2f2;
 }
 
-/* Style the header */
-header {
-    padding: 1.5rem 2rem;
-    text-align: center;
-    background-color: #a5886a;
-    color: #f8f1e4;
-    border-bottom: 3px solid #4a3b2e;
+/* Center the container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 16px;
 }
 
-header h1 {
-    font-size: 2.5rem;
+/* Style the title */
+.title {
+  font-size: 3rem;
+  margin-bottom: 16px;
 }
 
-/* Style the main content */
-main {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Style the quote */
+.quote {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
 }
 
 /* Style the button */
-button {
-    padding: 0.75rem 1.5rem;
-    font-size: 1.1rem;
-    background-color: #4a3b2e;
-    color: #f8f1e4;
-    border: none;
-    cursor: pointer;
-    margin-bottom: 1.5rem;
-    transition: background-color 0.3s ease;
+.button {
+  font-size: 1.2rem;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
 }
 
-button:hover {
-    background-color: #a5886a;
-}
-
-/* Style the quote display */
-#quoteDisplay {
-    font-size: 1.5rem;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+/* Add some hover effect to the button */
+.button:hover {
+  background-color: #45a049;
 }
