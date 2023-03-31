@@ -1,6 +1,6 @@
 // Import required modules
 const express = require('express');
-const { getRandomQuote } = require('./database/databaseConnection');
+const { getRandomQuote } = require('databaseConnection');
 
 // Initialize the Express app
 const app = express();
