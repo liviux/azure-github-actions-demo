@@ -1,30 +1,23 @@
-const sql = require('mssql');
+// Import required modules
 const express = require('express');
+const { getRandomQuote } = require('./database/databaseConnection');
+
+// Initialize the Express app
 const app = express();
+const PORT = process.env.PORT || 3000;
 
-const config = {
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  server: process.env.DB_SERVER,
-  database: process.env.DB_NAME
-};
-
-async function getQuotes() {
-  try {
-    await sql.connect(config);
-    const result = await sql.query`SELECT Quote FROM ConfuciusQuotes`;
-    const quotes = result.recordset.map(record => record.Quote);
-    return quotes;
-  } catch (err) {
-    console.error(err);
-  }
-}
-
-app.get('/quotes', async (req, res) => {
-  const quotes = await getQuotes();
-  res.json(quotes);
+// Define the API endpoint to get a random quote
+app.get('/api/quote', async (req, res) => {
+    try {
+        const quote = await getRandomQuote();
+        res.json({ quote });
+    } catch (error) {
+        console.error('Error fetching quote:', error);
+        res.status(500).json({ error: 'Error fetching quote' });
+    }
 });
 
-app.listen(3000, () => {
-  console.log('Server listening on port 3000');
+// Start the server
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
