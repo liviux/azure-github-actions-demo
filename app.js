@@ -1,16 +1,23 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const quoteDisplay = document.getElementById('quote');
-    const getQuoteButton = document.getElementById('get-quote');
+const express = require('express');
+const cors = require('cors');
+const db = require('./databaseConnection');
 
-    getQuoteButton.addEventListener('click', async () => {
-        try {
-            const response = await fetch('/api/random-quote');
-            const data = await response.json();
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-            quoteDisplay.innerText = data.quote;
-        } catch (error) {
-            console.error('Error fetching quote:', error);
-            quoteDisplay.innerText = 'Error fetching quote. Please try again later.';
-        }
-    });
+app.use(cors());
+app.use(express.json());
+
+app.get('/api/random-quote', async (req, res) => {
+    try {
+        const randomQuote = await db.getRandomQuote();
+        res.status(200).json(randomQuote);
+    } catch (error) {
+        console.error('Error fetching random quote:', error);
+        res.status(500).json({ message: 'Internal Server Error' });
+    }
+});
+
+app.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}`);
 });
