@@ -1,59 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
-
-body {
-    font-family: 'Noto Serif SC', serif;
-    background-color: #f5e9d7;
-    color: #5d3c29;
+/* Reset browser styles */
+* {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url('https://static.vecteezy.com/system/resources/previews/000/566/147/non_2x/chinese-ornament-background-vector.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    box-sizing: border-box;
 }
 
-.container {
+/* Set the background and text colors */
+body {
+    background-color: #f8f1e4;
+    color: #4a3b2e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Style the header */
+header {
+    padding: 1.5rem 2rem;
     text-align: center;
-    background-color: rgba(245, 233, 215, 0.9);
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
+    background-color: #a5886a;
+    color: #f8f1e4;
+    border-bottom: 3px solid #4a3b2e;
 }
 
-h1 {
+header h1 {
     font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
 }
 
-#quote-container {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+/* Style the main content */
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#quote {
-    font-style: italic;
-}
-
+/* Style the button */
 button {
-    font-family: 'Noto Serif SC', serif;
-    font-size: 1rem;
-    font-weight: 700;
-    color: #5d3c29;
-    background-color: #f5e9d7;
-    border: 2px solid #5d3c29;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    background-color: #4a3b2e;
+    color: #f8f1e4;
+    border: none;
     cursor: pointer;
-    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #5d3c29;
-    color: #f5e9d7;
+    background-color: #a5886a;
+}
+
+/* Style the quote display */
+#quoteDisplay {
+    font-size: 1.5rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
