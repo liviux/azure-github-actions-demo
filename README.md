@@ -2115,4 +2115,48 @@ You have completed all the requirements that you have specified so far. You have
    
 Of course it doesn't work.   
 After a couple of days of tries and only working with ChatGPT I did managed at least to deploy it, but there are a lot of other problems.
-
+App is depplyed and connected to the DB, but the button doesn't do a thing
+   ```
+   2023-04-04T10:10:43.495101642Z    _____                               
+2023-04-04T10:10:43.495155046Z   /  _  \ __________ _________   ____  
+2023-04-04T10:10:43.495161046Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2023-04-04T10:10:43.495165646Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2023-04-04T10:10:43.495169847Z \____|__  /_____ \____/ |__|    \___  >
+2023-04-04T10:10:43.495174247Z         \/      \/                  \/ 
+2023-04-04T10:10:43.495178347Z A P P   S E R V I C E   O N   L I N U X
+2023-04-04T10:10:43.495182348Z 
+2023-04-04T10:10:43.495186148Z Documentation: http://aka.ms/webapp-linux
+2023-04-04T10:10:43.495190148Z NodeJS quickstart: https://aka.ms/node-qs
+2023-04-04T10:10:43.495194048Z NodeJS Version : v16.19.0
+2023-04-04T10:10:43.495197949Z Note: Any data outside '/home' is not persisted
+2023-04-04T10:10:43.495202049Z 
+2023-04-04T10:10:44.800235303Z Starting OpenBSD Secure Shell server: sshd.
+2023-04-04T10:10:45.031989672Z Starting periodic command scheduler: cron.
+2023-04-04T10:10:45.180998658Z Cound not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2023-04-04T10:10:45.182178141Z Could not find operation ID in manifest. Generating an operation id...
+2023-04-04T10:10:45.191330892Z Build Operation ID: 4aaba0e0-bc5f-49c7-804e-4391db2c5979
+2023-04-04T10:10:45.402386185Z Environment Variables for Application Insight's IPA Codeless Configuration exists..
+2023-04-04T10:10:45.462343544Z Writing output script to '/opt/startup/startup.sh'
+2023-04-04T10:10:45.555727378Z Running #!/bin/sh
+2023-04-04T10:10:45.555788083Z 
+2023-04-04T10:10:45.555795583Z # Enter the source directory to make sure the script runs where the user expects
+2023-04-04T10:10:45.555801384Z cd "/home/site/wwwroot"
+2023-04-04T10:10:45.555806884Z 
+2023-04-04T10:10:45.555811884Z export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
+2023-04-04T10:10:45.555817085Z if [ -z "$PORT" ]; then
+2023-04-04T10:10:45.555822285Z 		export PORT=8080
+2023-04-04T10:10:45.555833186Z fi
+2023-04-04T10:10:45.555838586Z 
+2023-04-04T10:10:45.565306159Z npm start
+2023-04-04T10:10:49.341042326Z npm info it worked if it ends with ok
+2023-04-04T10:10:49.368241367Z npm info using npm@6.14.15
+2023-04-04T10:10:49.368267269Z npm info using node@v16.19.0
+2023-04-04T10:10:50.085214077Z npm info lifecycle confucius-quotes@1.0.0~prestart: confucius-quotes@1.0.0
+2023-04-04T10:10:50.102890208Z npm info lifecycle confucius-quotes@1.0.0~start: confucius-quotes@1.0.0
+2023-04-04T10:10:50.165521017Z 
+2023-04-04T10:10:50.165583921Z > confucius-quotes@1.0.0 start /home/site/wwwroot
+2023-04-04T10:10:50.165609423Z > node app.js
+2023-04-04T10:10:50.165615223Z 
+2023-04-04T10:10:59.065535432Z Server listening on port 8080
+2023-04-04T10:10:59.406987626Z Connected to the database
+```
