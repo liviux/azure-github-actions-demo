@@ -2113,9 +2113,10 @@ You have completed all the requirements that you have specified so far. You have
 </details>
 
    
-Of course it doesn't work.   
+Of course it doesn't work. Our work in DevOps and SRE is safe for now.
+I know that AI is not so good if you give it many prompts, but i tried with very few requests and it fails worse.
 After a couple of days of tries and only working with ChatGPT I did managed at least to deploy it, but there are a lot of other problems.
-App is depplyed and connected to the DB, but the button doesn't do a thing
+App is deployed and connected to the DB, but the button doesn't do a thing
    ```
    2023-04-04T10:10:43.495101642Z    _____                               
 2023-04-04T10:10:43.495155046Z   /  _  \ __________ _________   ____  
