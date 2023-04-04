@@ -2111,3 +2111,8 @@ Is there anything else you would like to know or do for your project?
 <summary>Bing AI Chat - Creative</summary>
 You have completed all the requirements that you have specified so far. You have created a node js app that shows random Confucius quotes, a SQL database that stores the quotes, a web app in Azure that hosts your app, GitHub actions that automate your deployment, and App Insights that monitor your app. You have also hidden your sensitive data using secrets and environment variables. There is nothing else to do unless you want to add more features or improve your existing ones. The project is done unless you have more goals or feedback. Congratulations on your achievement!🎉
 </details>
+
+   
+Of course it doesn't work.   
+After a couple of days of tries and only working with ChatGPT I did managed at least to deploy it, but there are a lot of other problems.
+
